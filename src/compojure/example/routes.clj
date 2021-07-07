@@ -8,6 +8,8 @@
 
 (defroutes main-routes
   (GET "/" [] (index-page))
+  (GET "/foobar" [x y z]
+       (str x ", " y ", " z))
   (route/resources "/")
   (route/not-found "Page not found"))
 
